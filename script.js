@@ -5,29 +5,30 @@ var p1Button= document.querySelector('#p1Button')
 var p2Button= document.querySelector('#p2Button')
 
 
-let num =0;
+let p1Score =0;
+let p2Score =0;
+let winning_score= 3;
+let winning_score1= 3;
+let isGameOver= false;
 
 p1Button.addEventListener('click',function(){
-    num +=1;
-    p1Display.textContent= num;
-    if(num>20){
-        p1Button.addEventListener('click',function(){
-            return `Don't cross your limits....`
-        })
+    if(!isGameOver){
+        p1Score +=1;
     }
+    if(p1Score === winning_score){
+      isGameOver= true
+    }
+    p1Display.textContent= p1Score;
     
 })
-
-let num1 =0;
 p2Button.addEventListener('click',function(){
-    num1 +=1;
-    p2Display.textContent= num1;
-
-    if(num>20){
-        p2Button.addEventListener('click',function(){
-            return `Don't cross your limits....`
-        })
+    if(!isGameOver){
+        p2Score +=1;
     }
+    if(p2Score === winning_score1){
+      isGameOver= true
+    }
+    p2Display.textContent= p2Score;
     
 })
 

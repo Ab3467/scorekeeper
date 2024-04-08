@@ -23,15 +23,15 @@ p1Button.addEventListener('click',function(){
 })
 
 
-p2Button.addEventListener('click',function(){
-    if(!isGameOver){
-        p2Score +=1;
-    if(p2Score === winning_score){
-      isGameOver= true
-    }
-    p2Display.textContent= p1Score;
-}
-})
+// p2Button.addEventListener('click',function(){
+//     if(!isGameOver){
+//         p2Score +=1;
+//     if(p2Score === winning_score){
+//       isGameOver= true
+//     }
+//     p2Display.textContent= p1Score;
+// }
+// })
 
 
 winnersoreSelect.addEventListener('change',function(){
